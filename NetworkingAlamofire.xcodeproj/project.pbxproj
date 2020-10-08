@@ -76,25 +76,65 @@
 		6BF3E9EC252F499A00DA7570 /* NetworkingAlamofire */ = {
 			isa = PBXGroup;
 			children = (
+				6BF3EA27252F4C0800DA7570 /* Model */,
+				6BF3EA26252F4C0100DA7570 /* View */,
+				6BF3EA28252F4C0F00DA7570 /* Controller */,
+				6BF3EA29252F4C1C00DA7570 /* Network */,
+				6BF3EA24252F4BCC00DA7570 /* Support */,
+			);
+			path = NetworkingAlamofire;
+			sourceTree = "<group>";
+		};
+		6BF3EA24252F4BCC00DA7570 /* Support */ = {
+			isa = PBXGroup;
+			children = (
 				6BF3E9ED252F499A00DA7570 /* AppDelegate.swift */,
 				6BF3E9EF252F499A00DA7570 /* SceneDelegate.swift */,
-				6BF3EA13252F4B0400DA7570 /* CollectionViewCell.swift */,
-				6BF3EA10252F4B0400DA7570 /* Course.swift */,
-				6BF3EA0C252F4B0400DA7570 /* CoursesViewController.swift */,
-				6BF3EA11252F4B0400DA7570 /* DataProvider.swift */,
-				6BF3EA14252F4B0400DA7570 /* ImageProperties.swift */,
-				6BF3EA0B252F4B0400DA7570 /* ImageViewController.swift */,
-				6BF3EA0F252F4B0400DA7570 /* MainViewController.swift */,
-				6BF3EA15252F4B0400DA7570 /* NetworkManager.swift */,
-				6BF3EA0D252F4B0400DA7570 /* TableViewCell.swift */,
-				6BF3EA0E252F4B0400DA7570 /* WebsiteDescription.swift */,
-				6BF3EA12252F4B0400DA7570 /* WebViewController.swift */,
 				6BF3EA04252F4A6900DA7570 /* Main.storyboard */,
 				6BF3E9F6252F499C00DA7570 /* Assets.xcassets */,
 				6BF3E9F8252F499C00DA7570 /* LaunchScreen.storyboard */,
 				6BF3E9FB252F499C00DA7570 /* Info.plist */,
 			);
-			path = NetworkingAlamofire;
+			path = Support;
+			sourceTree = "<group>";
+		};
+		6BF3EA26252F4C0100DA7570 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BF3EA0D252F4B0400DA7570 /* TableViewCell.swift */,
+				6BF3EA13252F4B0400DA7570 /* CollectionViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6BF3EA27252F4C0800DA7570 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6BF3EA14252F4B0400DA7570 /* ImageProperties.swift */,
+				6BF3EA10252F4B0400DA7570 /* Course.swift */,
+				6BF3EA0E252F4B0400DA7570 /* WebsiteDescription.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6BF3EA28252F4C0F00DA7570 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6BF3EA0F252F4B0400DA7570 /* MainViewController.swift */,
+				6BF3EA0C252F4B0400DA7570 /* CoursesViewController.swift */,
+				6BF3EA12252F4B0400DA7570 /* WebViewController.swift */,
+				6BF3EA0B252F4B0400DA7570 /* ImageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6BF3EA29252F4C1C00DA7570 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				6BF3EA15252F4B0400DA7570 /* NetworkManager.swift */,
+				6BF3EA11252F4B0400DA7570 /* DataProvider.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,7 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2PAJC487U;
-				INFOPLIST_FILE = NetworkingAlamofire/Info.plist;
+				INFOPLIST_FILE = NetworkingAlamofire/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,7 +379,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2PAJC487U;
-				INFOPLIST_FILE = NetworkingAlamofire/Info.plist;
+				INFOPLIST_FILE = NetworkingAlamofire/Support/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
