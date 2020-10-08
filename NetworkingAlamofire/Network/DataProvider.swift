@@ -1,6 +1,6 @@
 //
 //  DataProvider.swift
-//  Networking
+//  NetworkingAlamofire
 //
 //  Created by Eugene Kiselev on 08.10.2020.
 //

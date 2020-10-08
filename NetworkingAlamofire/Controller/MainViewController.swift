@@ -1,6 +1,6 @@
 //
 //  MainViewController.swift
-//  Networking
+//  NetworkingAlamofire
 //
 //  Created by Eugene Kiselev on 08.10.2020.
 //
@@ -92,6 +92,20 @@ class MainViewController: UICollectionViewController {
         }
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let coursesVC = segue.destination as? CoursesViewController
+        
+        // В зависимости от метода будет вызывать экземпляр этого класса:
+        switch segue.identifier {
+        case "OurCourses":
+            coursesVC?.fetchData()
+        case "OurCoursesAlamofire":
+            coursesVC?.fetchDataWithAlamofire()
+        default:
+            break
+        }
+    }
 
     // MARK: UICollectionViewDataSource
 
@@ -129,7 +143,8 @@ class MainViewController: UICollectionViewController {
             showAlert()
             dataProvider.startDownload()
         case .ourCoursesAlamofire:
-            print(action.rawValue)
+            
+            performSegue(withIdentifier: "OurCoursesAlamofire", sender: self)
         }
     }
 

@@ -1,6 +1,6 @@
 //
 //  CoursesViewController.swift
-//  Networking
+//  NetworkingAlamofire
 //
 //  Created by Eugene Kiselev on 08.10.2020.
 //
@@ -16,12 +16,6 @@ class CoursesViewController: UIViewController {
 
     @IBOutlet var tableView: UITableView!
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        fetchData()
-    }
-    
     func fetchData() {
         
         NetworkManager.fetchData(url: url) { (courses) in
@@ -30,6 +24,11 @@ class CoursesViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+    
+    func fetchDataWithAlamofire() {
+        
+        AlamofireNetworkRequest.sendRequest(url: url)
     }
     
     private func configureCell(cell: TableViewCell, for indexPath: IndexPath) {
