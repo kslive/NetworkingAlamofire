@@ -10,6 +10,9 @@ import Alamofire
 
 class AlamofireNetworkRequest {
     
+    static var onProgress: ((Double) -> ())?
+    static var completes: ((String) -> ())?
+    
     static func sendRequest(url: String, completion: @escaping (_ courses: [Course]) -> ()) {
         
         guard let url = URL(string: url) else { return }
@@ -52,13 +55,36 @@ class AlamofireNetworkRequest {
     
     static func response(url: String) {
         AF.request(url).response { (response) in
-            // извлекаем данные
             guard
                 let data = response.data,
                   let string = String(data: data, encoding: .utf8)
             else { return }
             
             print(string)
+        }
+    }
+    
+    static func downloadImageWithProgress(url: String, completion: @escaping (_ image: UIImage) -> ()) {
+        guard let url = URL(string: url) else { return }
+        
+        AF.request(url).validate().downloadProgress { (progress) in
+            print("ttUcount: \(progress.totalUnitCount)")
+            print("cmltUcount: \(progress.completedUnitCount)")
+            print("frC: \(progress.fractionCompleted)")
+            print("lcl: \(progress.localizedDescription)")
+            print("______________________________________")
+            
+            self.onProgress?(progress.fractionCompleted)
+            self.completes?(progress.localizedDescription)
+        }.response { (response) in
+            guard
+                let data = response.data,
+                let image = UIImage(data: data)
+            else { return }
+            
+            DispatchQueue.main.async {
+                completion(image)
+            }
         }
     }
 }
