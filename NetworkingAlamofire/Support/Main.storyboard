@@ -270,6 +270,8 @@
                         <segue destination="Okz-m4-eD1" kind="show" identifier="OurCoursesAlamofire" id="ed8-DG-y2D"/>
                         <segue destination="eEq-kV-HBK" kind="show" identifier="ResponseData" id="cc0-RZ-xHD"/>
                         <segue destination="eEq-kV-HBK" kind="show" identifier="LargeImage" id="dLh-hI-Jfa"/>
+                        <segue destination="Okz-m4-eD1" kind="show" identifier="POSTRequest" id="nfg-Aw-7fp"/>
+                        <segue destination="Okz-m4-eD1" kind="show" identifier="PUTRequest" id="AZ1-2y-ZGh"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QNp-Q0-GA9" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -296,7 +298,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ed8-DG-y2D"/>
+        <segue reference="AZ1-2y-ZGh"/>
         <segue reference="dLh-hI-Jfa"/>
     </inferredMetricsTieBreakers>
     <resources>
