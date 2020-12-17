@@ -96,7 +96,6 @@ class MainViewController: UICollectionViewController {
         
         let coursesVC = segue.destination as? CoursesViewController
         
-        // В зависимости от метода будет вызывать экземпляр этого класса:
         switch segue.identifier {
         case "OurCourses":
             coursesVC?.fetchData()

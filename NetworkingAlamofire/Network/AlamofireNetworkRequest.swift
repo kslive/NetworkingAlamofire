@@ -14,9 +14,14 @@ class AlamofireNetworkRequest {
         
         guard let url = URL(string: url) else { return }
         
-        AF.request(url, method: .get).responseJSON { response in
+        AF.request(url, method: .get).validate().responseJSON { response in
             
-            print(response)
+            switch response.result {
+            case .success(let value):
+                print(value)
+            case .failure(let error):
+                print(error)
+            }
         }
     }
 }
